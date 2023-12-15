@@ -1,4 +1,4 @@
-version: "3.1"
+version: '3.1'
 services:
   web:
     image: odoo:16.0
@@ -11,14 +11,13 @@ services:
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
     environment:
-      - PASSWORD_FILE=/run/secrets/postgresql_password
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgresql_password
     secrets:
       - postgresql_password
   db:
     image: postgres:15
     environment:
       - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=odoo_super_password
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
@@ -32,4 +31,4 @@ volumes:
 
 secrets:
   postgresql_password:
-    file: odoo_pg_pass
+    file: ./odoo_pg_pass
