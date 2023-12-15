@@ -1,0 +1,30 @@
+# Fichiers générés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dossiers générés
+dbfilter.xml
+custom/addons/*
+custom/sessions/*
+custom/tmp/*
+custom/views/*
+
+# Fichiers spécifiques à l'environnement
+.env
+.env.local
+
+# Fichiers de configuration Odoo
+config/odoo.conf
+
+# Fichiers de configuration pour l'IDE (à adapter selon l'IDE utilisé)
+.vscode/
+.idea/
+
+# Fichiers de sauvegarde
+*.bak
+
+# Dossiers et fichiers spécifiques aux dépendances du projet
+node_modules/
+__pycache__/
