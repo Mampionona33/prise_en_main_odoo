@@ -1,0 +1,52 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+  "name": "Ubuntu",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/node": {
+      "version": "lts",
+      "nodeGypDependencies": "true",
+      "nvmInstallPath": "/usr/local/share/nvm",
+      "nvmVersion": "latest"
+    },
+    "ghcr.io/devcontainers/features/python": {
+      "version": "os-provided",
+      "installTools": "true",
+      "optimize": "false",
+      "installPath": "/usr/local/python",
+      "installJupyterlab": "false",
+      "configureJupyterlabAllowOrigin": "",
+      "httpProxy": ""
+    },
+    "ghcr.io/devcontainers/features/git": {
+      "version": "os-provided",
+      "ppa": "true"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker": {
+      "version": "latest",
+      "moby": "true",
+      "dockerDashComposeVersion": "v1",
+      "azureDnsAutoDetection": "true",
+      "dockerDefaultAddressPool": "",
+      "installDockerBuildx": "true"
+    }
+  },
+  "postCreateCommand": "mkdir -p /workspaces/prise_en_main_odoo/odoo_pg_pass"
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "uname -a",
+
+  // Configure tool-specific properties.
+  // "customizations": {},
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
