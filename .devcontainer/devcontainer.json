@@ -32,9 +32,7 @@
       "dockerDefaultAddressPool": "",
       "installDockerBuildx": "true"
     }
-  },
-  "postCreateCommand": "mkdir -p /workspaces/prise_en_main_odoo/odoo_pg_pass"
-
+  }
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
 
